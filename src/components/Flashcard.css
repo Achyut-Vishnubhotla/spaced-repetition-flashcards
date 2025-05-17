@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+.flashcard-container {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2.5rem auto;
+  max-width: 420px;
+  color: #2d3142;
+  font-size: 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  cursor: pointer;
+  border: 1.5px solid #e0e0e0;
+  position: relative;
+}
+
+.flashcard-container:focus,
+.flashcard-container:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+  transform: scale(1.025);
+}
+
+.flashcard-question {
+  font-weight: 700;
+  color: #3a86ff;
+  margin-bottom: 1.2rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.flashcard-answer {
+  color: #43aa8b;
+  margin-top: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.flashcard-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.correct-btn, .wrong-btn {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(67, 170, 139, 0.08);
+}
+
+.correct-btn {
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+}
+
+.correct-btn:hover {
+  background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+  color: #222;
+}
+
+.wrong-btn {
+  background: linear-gradient(90deg, #ff6f61 0%, #ffb88c 100%);
+  color: #fff;
+}
+
+.wrong-btn:hover {
+  background: linear-gradient(90deg, #ffb88c 0%, #ff6f61 100%);
+  color: #222;
+}
+
+body.dark-theme .flashcard-container {
+  background: rgba(34, 40, 49, 0.85);
+  border: 1.5px solid #232526;
+  color: #fff;
+}
+
+body.dark-theme .flashcard-question {
+  color: #ffd700;
+}
+
+body.dark-theme .flashcard-answer {
+  color: #90caf9;
+}
